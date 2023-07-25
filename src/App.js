@@ -15,10 +15,15 @@ import EntryLines from './component/EntryLines';
 import {useState} from 'react'
 import NewEntryForm from './component/NewEntryForm';
 import ModalEdit from './component/ModalEdit';
+import { useSelector } from "react-redux";
+
 
 function App() {
 
-  const [entries, setEntries] = useState(initialEntries)
+  const entries = useSelector((state) => state.entries)
+
+  
+
 
   return (
     <Container>
