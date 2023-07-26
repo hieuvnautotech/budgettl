@@ -1,7 +1,12 @@
 import React from 'react'
 import {Container, Segment, Grid, Icon} from 'semantic-ui-react'
+import { useDispatch} from 'react-redux'
+
 
 function EntryLine({id, description, value, isExpense=false}) {
+
+  const dispatch = useDispatch()
+
   return (
     <Container>
       <Segment color={isExpense ? 'red' : 'green'}>

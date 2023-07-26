@@ -46,36 +46,36 @@ function App() {
 
 export default App;
 
-var initialEntries = [
-  {
-  id:1,
-  description:'work income',
-  value:'1500',
-  isExpense: false,
-},
-{
-  id:2,
-  description:'work income',
-  value:'1500',
-  isExpense: false,
-},
-{
-  id:3,
-  description:'work income',
-  value:'1500',
-  isExpense: false,
-},
-{
-  id:4,
-  description:'work income',
-  value:'1500',
-  isExpense: false,
-},
-{
-  id:5,
-  description:'work income',
-  value:'1500',
-  isExpense: false,
-},
+// var initialEntries = [
+//   {
+//   id:1,
+//   description:'work income',
+//   value:'1500',
+//   isExpense: false,
+// },
+// {
+//   id:2,
+//   description:'work income',
+//   value:'1500',
+//   isExpense: false,
+// },
+// {
+//   id:3,
+//   description:'work income',
+//   value:'1500',
+//   isExpense: false,
+// },
+// {
+//   id:4,
+//   description:'work income',
+//   value:'1500',
+//   isExpense: false,
+// },
+// {
+//   id:5,
+//   description:'work income',
+//   value:'1500',
+//   isExpense: false,
+// },
 
-]
+// ]
