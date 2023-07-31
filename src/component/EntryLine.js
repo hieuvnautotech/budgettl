@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container, Segment, Grid, Icon} from 'semantic-ui-react'
 import { useDispatch} from 'react-redux'
-
+import { openEditModal } from '../actions/modals.actions'
 
 function EntryLine({id, description, value, isExpense=false}) {
 
@@ -21,7 +21,7 @@ function EntryLine({id, description, value, isExpense=false}) {
             </Grid.Column>
 
             <Grid.Column width={3}>
-              <Icon name='edit' bordered/>
+              <Icon name='edit' bordered onClick={()=>dispatch(openEditModal(id))}/>
               <Icon name='trash' bordered/>
             </Grid.Column>
           </Grid.Row>

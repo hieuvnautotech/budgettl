@@ -21,6 +21,8 @@ import { useSelector } from "react-redux";
 function App() {
 
   const entries = useSelector((state) => state.entries)
+  const {isOpen, id} = useSelector((state) => state.modals)
+  const [entry, setEntry] = useState()
 
   
 
@@ -39,7 +41,10 @@ function App() {
       <EntryLines entries={entries}/>
       <MainHeader title='Add New Transaction' type='h3'/>
       <NewEntryForm/>
-      <ModalEdit/>
+      <ModalEdit
+        isOpen={isOpen}
+        {...entry}
+      />
     </Container>
   );
 }
