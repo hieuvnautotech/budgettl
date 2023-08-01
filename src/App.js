@@ -12,7 +12,7 @@ import MainHeader from './component/MainHeader';
 import DisplayBalance from './component/DisplayBalance';
 import DisplayBalances from './component/DisplayBalances'
 import EntryLines from './component/EntryLines';
-import {useState} from 'react'
+import { useState, useEffect } from "react";
 import NewEntryForm from './component/NewEntryForm';
 import ModalEdit from './component/ModalEdit';
 import { useSelector } from "react-redux";
@@ -23,7 +23,11 @@ function App() {
   const entries = useSelector((state) => state.entries)
   const {isOpen, id} = useSelector((state) => state.modals)
   const [entry, setEntry] = useState()
-
+  // này show data khi nhấn edit
+  useEffect(() => {
+    const index = entries.findIndex((entry) => entry.id === id);
+    setEntry(entries[index]);
+  }, [isOpen, id]);
   
 
 
